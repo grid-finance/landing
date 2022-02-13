@@ -1,0 +1,43 @@
+$base: #232426;
+
+@font-face {
+  font-family: 'Cabin';
+  font-weight: 400;
+  src: url(./assets/fonts/Cabin-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-weight: 500;
+  src: url(./assets/fonts/Cabin-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-weight: 600;
+  src: url(./assets/fonts/Cabin-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-weight: 700;
+  src: url(./assets/fonts/Cabin-Bold.ttf);
+}
+
+html {
+  background-color: $base !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

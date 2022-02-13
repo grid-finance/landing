@@ -1,0 +1,330 @@
+$base: #232426;
+$text-primary: #fffffff2;
+$text-secondary: #ffffff99;
+$text-tertiary: #ffffff4d;
+$grid-color: #ffffff0a;
+$primary: #2b60bf;
+
+.app {
+  background-color: $base !important;
+  background: url(./assets/grid_base.svg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  height: 100vh;
+}
+
+.grid-pattern {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.logo {
+  width: 103px;
+  margin: 80px auto 0;
+}
+
+.heading {
+  color: $text-primary;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 67px;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  width: 760px;
+  margin: 40px auto 0;
+  text-shadow: 0 0.5px 0px $text-primary, 0 0.5px 0px $text-primary;
+}
+
+.subheading {
+  color: $text-secondary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  width: 760px;
+  margin: 40px auto 0;
+}
+
+.input-container {
+  margin: 48px auto 0;
+}
+
+.input {
+  width: 264px;
+  height: 48px;
+
+  background-color: white;
+}
+
+#button {
+  width: 180px;
+  height: 48px;
+  margin-left: 20px;
+
+  background: #2b60bf !important;
+  border-radius: 2px !important;
+  color: white !important;
+  text-transform: none !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  font-family: 'Cabin' !important;
+}
+
+.social-container {
+  margin: 40px auto 0;
+}
+
+.social {
+  margin: 0 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.dialog-pattern {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.dialog-subtitle {
+  color: $text-secondary !important;
+  font-size: 20px !important;
+  margin: 40px auto !important;
+}
+
+.dialog-text {
+  color: $text-tertiary !important;
+  font-size: 14px !important;
+  text-align: center;
+  margin: 32px 0 112px !important;
+}
+
+.modal-social-container {
+  float: left;
+  height: 36px;
+}
+
+.close-button {
+  float: right;
+  color: $text-secondary;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: 0.5px dashed $text-secondary;
+  height: 36px;
+  line-height: 36px;
+}
+
+.MuiDialog-paper {
+  background: $base !important;
+  border-radius: 14px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 45px !important;
+  letter-spacing: 0.01em !important;
+  text-align: center !important;
+  width: 480px !important;
+}
+
+.MuiDialogTitle-root {
+  color: $text-primary;
+  font-size: 32px !important;
+  padding: 48px 48px 0 !important;
+}
+
+.MuiDialogContent-root {
+  padding: 0 40px 40px !important;
+  z-index: 10;
+}
+
+// Mobile CSS
+
+.m-app {
+  background-color: $base !important;
+  background: url(./assets/grid_base_mobile.svg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+.m-container {
+  text-align: left;
+  height: 100vh;
+}
+
+.m-grid-pattern {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+.m-logo {
+  width: 85px;
+  margin: 24px;
+}
+
+.m-heading {
+  color: $text-primary;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  margin: 40px 24px 0;
+  text-shadow: 0 0.2px 0px $text-primary, 0 0.2px 0px $text-primary;
+}
+
+.m-subheading {
+  color: $text-secondary;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  margin: 40px 24px 0;
+}
+
+.m-input-container {
+  margin: 56px 24px 0;
+}
+
+.m-input {
+  width: 100%;
+  height: 48px;
+
+  background-color: white;
+}
+
+#m-button {
+  width: 164px;
+  height: 48px;
+  margin-top: 16px;
+
+  background: #2b60bf !important;
+  border-radius: 2px !important;
+  color: white !important;
+  text-transform: none !important;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  font-family: 'Cabin' !important;
+}
+
+.m-social-container {
+  position: absolute;
+  bottom: 0;
+  margin: 24px;
+}
+
+.m-social {
+  margin: 0 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.m-dialog-pattern {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.m-dialog-content {
+  z-index: 10;
+}
+
+.m-dialog-title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: $text-primary;
+  padding: 48px 24px 0;
+}
+
+.m-dialog-subtitle {
+  color: $text-secondary;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  margin: 40px 24px 0;
+}
+
+.m-dialog-text {
+  color: $text-tertiary;
+  font-size: 14px;
+  text-align: left;
+  margin: 32px 24px 0;
+}
+
+.m-bottom-section {
+  position: absolute;
+  bottom: 0;
+  padding: 0 24px 24px;
+  width: 100%;
+}
+
+.m-modal-social-container {
+  float: left;
+  height: 36px;
+}
+
+.m-close-button {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  float: right;
+  color: $text-secondary;
+  cursor: pointer;
+  border-bottom: 0.5px dashed $text-secondary;
+  height: 24px;
+}
+
+.MuiDrawer-paper {
+  background: $base !important;
+  max-height: 70% !important;
+  height: 70% !important;
+}
+
+.MuiOutlinedInput-input {
+  padding: 13.5px 14px !important;
+}
