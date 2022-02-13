@@ -16,26 +16,56 @@ import gridPattern from './assets/grid_pattern.svg';
 import gridPatternMobile from './assets/grid_pattern_mobile.svg';
 import circlePattern from './assets/circular_pattern.svg';
 import circlePatternMobile from './assets/circular_pattern_mobile.svg';
+import { validate } from 'email-validator';
 
 const twitterLink = 'https://twitter.com/gridfinanceHQ';
 const discordLink = 'https://discord.gg/TCHgzkjByF';
 
+const addEmailToWaitlist = async (email: string) => {
+  try {
+    const res = await fetch('api.thegrid.finance/v1/waitlist', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    throw new Error('Request failed');
+  }
+};
+
 function App() {
   const [value, setValue] = useState('');
   const [open, setOpen] = useState(false);
+  const [error, setError] = useState('');
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.currentTarget.value);
+    setError('false');
   };
 
-  const submit = (event: SyntheticEvent) => {
+  const submit = async (event: SyntheticEvent) => {
     event.preventDefault();
-    // do thigns
-    setOpen(true);
+    if (validate(value)) {
+      try {
+        const data = await addEmailToWaitlist(value);
+        if (data) {
+          setOpen(true);
+        }
+      } catch (err) {
+        setError(String(err));
+      }
+    } else {
+      setError('Email format is incorrect');
+    }
   };
 
   const handleClose = () => {
     setOpen(false);
+    setValue('');
   };
 
   const renderApp = () => (
@@ -59,6 +89,7 @@ function App() {
             value={value}
             onChange={onChange}
             className="input"
+            required
           />
           <Button type="submit" onClick={submit} id="button">
             Join our Waiting List
