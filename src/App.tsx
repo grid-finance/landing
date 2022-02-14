@@ -53,8 +53,11 @@ function App() {
       if (validate(value)) {
         try {
           const data = await addEmailToWaitlist(value);
-          if (data) {
+          if (data.email) {
             setOpen(true);
+            setValue(data.email);
+          } else {
+            setError(data.message);
           }
         } catch (err) {
           setError('Request failed. Please contact site admin');
