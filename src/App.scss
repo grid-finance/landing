@@ -4,6 +4,7 @@ $text-secondary: #ffffff99;
 $text-tertiary: #ffffff4d;
 $grid-color: #ffffff0a;
 $primary: #2b60bf;
+$error-text: #f56363;
 
 .app {
   background-color: $base !important;
@@ -59,8 +60,14 @@ $primary: #2b60bf;
   margin: 40px auto 0;
 }
 
+.form-container {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
 .input-container {
-  margin: 48px auto 0;
+  position: relative;
 }
 
 .input {
@@ -70,12 +77,26 @@ $primary: #2b60bf;
   background-color: white;
 }
 
+.error-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: $error-text;
+  position: absolute;
+  bottom: -26px;
+  left: 14px;
+}
+
 #button {
   width: 180px;
   height: 48px;
   margin-left: 20px;
 
-  background: #2b60bf !important;
+  background: $primary !important;
   border-radius: 2px !important;
   color: white !important;
   text-transform: none !important;
@@ -220,12 +241,24 @@ $primary: #2b60bf;
   background-color: white;
 }
 
+.m-error-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: $error-text;
+  margin: 8px 0 0 14px;
+}
+
 #m-button {
   width: 164px;
   height: 48px;
   margin-top: 16px;
 
-  background: #2b60bf !important;
+  background: $primary !important;
   border-radius: 2px !important;
   color: white !important;
   text-transform: none !important;

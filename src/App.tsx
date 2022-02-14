@@ -23,7 +23,7 @@ const discordLink = 'https://discord.gg/TCHgzkjByF';
 
 const addEmailToWaitlist = async (email: string) => {
   try {
-    const res = await fetch('api.thegrid.finance/v1/waitlist', {
+    const res = await fetch('https://api.thegrid.finance/v1/waitlist', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,28 +44,31 @@ function App() {
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.currentTarget.value);
-    setError('false');
+    setError('');
   };
 
   const submit = async (event: SyntheticEvent) => {
     event.preventDefault();
-    if (validate(value)) {
-      try {
-        const data = await addEmailToWaitlist(value);
-        if (data) {
-          setOpen(true);
+    if (value) {
+      if (validate(value)) {
+        try {
+          const data = await addEmailToWaitlist(value);
+          if (data) {
+            setOpen(true);
+          }
+        } catch (err) {
+          setError('Request failed. Please contact site admin');
         }
-      } catch (err) {
-        setError(String(err));
+      } else {
+        setError('Email format is incorrect');
       }
     } else {
-      setError('Email format is incorrect');
+      setError('Email is required');
     }
   };
 
   const handleClose = () => {
     setOpen(false);
-    setValue('');
   };
 
   const renderApp = () => (
@@ -80,20 +83,23 @@ function App() {
           Do everything in a single application <br />
           No need to switch context, profiles or applications
         </div>
-        <form className="input-container">
-          <TextField
-            variant="outlined"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={value}
-            onChange={onChange}
-            className="input"
-            required
-          />
-          <Button type="submit" onClick={submit} id="button">
-            Join our Waiting List
-          </Button>
+        <form className="form-container">
+          <div className="input-container">
+            <TextField
+              variant="outlined"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={value}
+              onChange={onChange}
+              className="input"
+              required
+            />
+            <Button type="submit" onClick={submit} id="button">
+              Join our Waiting List
+            </Button>
+            {error !== '' && <div className="error-text">{error}</div>}
+          </div>
         </form>
         <div className="social-container">
           <a
@@ -190,6 +196,7 @@ function App() {
             onChange={onChange}
             className="m-input"
           />
+          {error !== '' && <div className="m-error-text">{error}</div>}
           <Button type="submit" onClick={submit} id="m-button">
             Join our Waiting List
           </Button>
