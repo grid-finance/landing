@@ -19,7 +19,7 @@ import circlePatternMobile from './assets/circular_pattern_mobile.svg';
 import { validate } from 'email-validator';
 
 const twitterLink = 'https://twitter.com/gridfinanceHQ';
-const discordLink = 'https://discord.gg/TCHgzkjByF';
+const discordLink = 'https://discord.gg/zVUjCU5kRw';
 
 const addEmailToWaitlist = async (email: string) => {
   try {
