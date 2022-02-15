@@ -70,6 +70,12 @@ $error-text: #f56363;
   position: relative;
 }
 
+.input-loader {
+  position: absolute;
+  top: 10px;
+  left: 218px;
+}
+
 .input {
   width: 264px;
   height: 48px;
@@ -248,6 +254,13 @@ $error-text: #f56363;
 
 .m-input-container {
   margin: 56px 24px 0;
+  position: relative;
+}
+
+.m-input-loader {
+  position: absolute;
+  top: 10px;
+  left: 284px;
 }
 
 .m-input {
@@ -383,4 +396,8 @@ $error-text: #f56363;
 .MuiOutlinedInput-input {
   padding: 13.5px 14px !important;
   font-family: 'Cabin' !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: $primary !important;
 }

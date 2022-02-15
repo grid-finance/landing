@@ -2,6 +2,7 @@ import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
 import './App.scss';
 import {
   Button,
+  CircularProgress,
   Dialog,
   DialogContent,
   DialogContentText,
@@ -41,6 +42,7 @@ function App() {
   const [value, setValue] = useState('');
   const [open, setOpen] = useState(false);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.currentTarget.value);
@@ -52,6 +54,7 @@ function App() {
     if (value) {
       if (validate(value)) {
         try {
+          setLoading(true);
           const data = await addEmailToWaitlist(value);
           if (data.email) {
             setOpen(true);
@@ -61,6 +64,8 @@ function App() {
           }
         } catch (err) {
           setError('Request failed. Please contact site admin');
+        } finally {
+          setLoading(false);
         }
       } else {
         setError('Email format is incorrect');
@@ -98,6 +103,7 @@ function App() {
               className="input"
               required
             />
+            {loading && <CircularProgress size={28} className="input-loader" />}
             <Button type="submit" onClick={submit} id="button">
               Join our Waiting List
             </Button>
@@ -199,6 +205,7 @@ function App() {
             onChange={onChange}
             className="m-input"
           />
+          {loading && <CircularProgress size={28} className="m-input-loader" />}
           {error !== '' && <div className="m-error-text">{error}</div>}
           <Button type="submit" onClick={submit} id="m-button">
             Join our Waiting List
