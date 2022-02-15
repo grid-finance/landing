@@ -116,8 +116,6 @@ $error-text: #f56363;
 
 .social {
   margin: 0 12px;
-  width: 24px;
-  height: 24px;
 }
 
 .dialog-pattern {
@@ -127,12 +125,14 @@ $error-text: #f56363;
 }
 
 .dialog-subtitle {
+  font-family: 'Cabin' !important;
   color: $text-secondary !important;
   font-size: 20px !important;
   margin: 40px auto !important;
 }
 
 .dialog-text {
+  font-family: 'Cabin' !important;
   color: $text-tertiary !important;
   font-size: 14px !important;
   text-align: center;
@@ -140,23 +140,35 @@ $error-text: #f56363;
 }
 
 .modal-social-container {
-  float: left;
-  height: 36px;
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  height: 24px;
+
+  :first-child {
+    margin-left: 0px !important;
+  }
+  :last-child {
+    margin-right: 0px !important;
+  }
 }
 
 .close-button {
-  float: right;
   color: $text-secondary;
   font-size: 20px;
   cursor: pointer;
   border-bottom: 0.5px dashed $text-secondary;
-  height: 36px;
-  line-height: 36px;
+  height: 24px;
+  line-height: 24px;
+
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
 }
 
 .MuiDialog-paper {
   background: $base !important;
-  border-radius: 14px !important;
+  border-radius: 8px !important;
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: 45px !important;
@@ -166,13 +178,17 @@ $error-text: #f56363;
 }
 
 .MuiDialogTitle-root {
+  font-family: 'Cabin' !important;
   color: $text-primary;
+  line-height: 1.4 !important;
   font-size: 32px !important;
   padding: 48px 48px 0 !important;
 }
 
 .MuiDialogContent-root {
+  font-family: 'Cabin' !important;
   padding: 0 40px 40px !important;
+  position: relative;
   z-index: 10;
 }
 
@@ -202,7 +218,7 @@ $error-text: #f56363;
 
 .m-logo {
   width: 85px;
-  margin: 24px;
+  margin: 24px 24px 0;
 }
 
 .m-heading {
@@ -273,15 +289,11 @@ $error-text: #f56363;
 }
 
 .m-social-container {
+  display: flex;
+  grid-gap: 24px;
   position: absolute;
-  bottom: 0;
-  margin: 24px;
-}
-
-.m-social {
-  margin: 0 12px;
-  width: 24px;
-  height: 24px;
+  bottom: 24px;
+  left: 24px;
 }
 
 .m-dialog-pattern {
@@ -295,6 +307,7 @@ $error-text: #f56363;
 }
 
 .m-dialog-title {
+  font-family: 'Cabin' !important;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
@@ -307,6 +320,7 @@ $error-text: #f56363;
 }
 
 .m-dialog-subtitle {
+  font-family: 'Cabin' !important;
   color: $text-secondary;
   font-size: 17px;
   font-style: normal;
@@ -319,6 +333,7 @@ $error-text: #f56363;
 }
 
 .m-dialog-text {
+  font-family: 'Cabin' !important;
   color: $text-tertiary;
   font-size: 14px;
   text-align: left;
@@ -333,8 +348,12 @@ $error-text: #f56363;
 }
 
 .m-modal-social-container {
-  float: left;
-  height: 36px;
+  display: flex;
+  grid-gap: 24px;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  height: 24px;
 }
 
 .m-close-button {
@@ -345,11 +364,14 @@ $error-text: #f56363;
   letter-spacing: 0.01em;
   text-align: left;
 
-  float: right;
   color: $text-secondary;
   cursor: pointer;
   border-bottom: 0.5px dashed $text-secondary;
   height: 24px;
+
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
 }
 
 .MuiDrawer-paper {
@@ -360,4 +382,5 @@ $error-text: #f56363;
 
 .MuiOutlinedInput-input {
   padding: 13.5px 14px !important;
+  font-family: 'Cabin' !important;
 }

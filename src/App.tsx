@@ -232,6 +232,7 @@ function App() {
             src={circlePatternMobile}
             alt="pattern"
             className="m-dialog-pattern"
+            width={window.screen.width}
           />
           <div className="m-dialog-content">
             <div className="m-dialog-title">
