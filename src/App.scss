@@ -222,9 +222,8 @@ $error-text: #f56363;
 }
 
 .m-grid-pattern {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
+  float: right;
+  margin: -48px 24px 0;
 }
 
 .m-logo {

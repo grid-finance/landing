@@ -188,12 +188,6 @@ function App() {
     <div className="m-app">
       <div className="m-container">
         <img src={logo} alt="logo" className="m-logo" />
-        <img
-          src={gridPatternMobile}
-          alt="grid pattern"
-          className="m-grid-pattern"
-          width={60}
-        />
         <div className="m-heading">
           End-to-end operations for web3 organizations and contributors
         </div>
@@ -240,6 +234,12 @@ function App() {
             <img src={discord} alt="discord" />
           </a>
         </div>
+        <img
+          src={gridPatternMobile}
+          alt="grid pattern"
+          className="m-grid-pattern"
+          width={60}
+        />
         <Drawer
           anchor="bottom"
           open={open}
