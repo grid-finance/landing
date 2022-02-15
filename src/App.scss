@@ -134,7 +134,7 @@ $error-text: #f56363;
   font-family: 'Cabin' !important;
   color: $text-secondary !important;
   font-size: 20px !important;
-  margin: 40px auto !important;
+  margin: 40px auto 0 !important;
 }
 
 .dialog-text {
@@ -191,6 +191,7 @@ $error-text: #f56363;
 .MuiDialogTitle-root {
   font-family: 'Cabin' !important;
   color: $text-primary;
+  font-weight: 700 !important;
   line-height: 1.4 !important;
   font-size: 32px !important;
   padding: 48px 48px 0 !important;
@@ -198,7 +199,7 @@ $error-text: #f56363;
 
 .MuiDialogContent-root {
   font-family: 'Cabin' !important;
-  padding: 0 40px 40px !important;
+  padding: 0 48px 40px !important;
   position: relative;
   z-index: 10;
 }
