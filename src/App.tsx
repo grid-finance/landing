@@ -104,7 +104,12 @@ function App() {
               required
             />
             {loading && <CircularProgress size={28} className="input-loader" />}
-            <Button type="submit" onClick={submit} id="button">
+            <Button
+              type="submit"
+              onClick={submit}
+              id="button"
+              disabled={loading}
+            >
               Join our Waiting List
             </Button>
             {error !== '' && <div className="error-text">{error}</div>}
@@ -187,6 +192,7 @@ function App() {
           src={gridPatternMobile}
           alt="grid pattern"
           className="m-grid-pattern"
+          width={60}
         />
         <div className="m-heading">
           End-to-end operations for web3 organizations and contributors
@@ -207,7 +213,12 @@ function App() {
           />
           {loading && <CircularProgress size={28} className="m-input-loader" />}
           {error !== '' && <div className="m-error-text">{error}</div>}
-          <Button type="submit" onClick={submit} id="m-button">
+          <Button
+            type="submit"
+            onClick={submit}
+            id="m-button"
+            disabled={loading}
+          >
             Join our Waiting List
           </Button>
         </form>

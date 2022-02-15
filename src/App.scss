@@ -149,7 +149,7 @@ $error-text: #f56363;
   position: absolute;
   bottom: 40px;
   left: 48px;
-  height: 24px;
+  height: 28px;
 
   :first-child {
     margin-left: 0px !important;
@@ -160,12 +160,17 @@ $error-text: #f56363;
 }
 
 .close-button {
-  color: $text-secondary;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: $text-secondary;
   cursor: pointer;
   border-bottom: 0.5px dashed $text-secondary;
-  height: 24px;
-  line-height: 24px;
+  height: 28px;
 
   position: absolute;
   bottom: 40px;
@@ -304,9 +309,7 @@ $error-text: #f56363;
 .m-social-container {
   display: flex;
   grid-gap: 24px;
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
+  margin: 40px 24px 0;
 }
 
 .m-dialog-pattern {
@@ -366,21 +369,21 @@ $error-text: #f56363;
   position: absolute;
   bottom: 24px;
   left: 24px;
-  height: 24px;
+  height: 28px;
 }
 
 .m-close-button {
-  font-style: normal;
   font-size: 20px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 28px;
   letter-spacing: 0.01em;
   text-align: left;
 
   color: $text-secondary;
   cursor: pointer;
   border-bottom: 0.5px dashed $text-secondary;
-  height: 24px;
+  height: 28px;
 
   position: absolute;
   bottom: 24px;
@@ -396,6 +399,10 @@ $error-text: #f56363;
 .MuiOutlinedInput-input {
   padding: 13.5px 14px !important;
   font-family: 'Cabin' !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
 }
 
 .MuiCircularProgress-colorPrimary {
